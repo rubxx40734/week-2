@@ -1,23 +1,640 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+*, *:before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body {
+  max-width: 1920px;
+  font-family: "Roboto Condensed", sans-serif; }
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto; }
+
 .header {
-  height: 200px;
-  background-color: #00cc99; }
-
-.footer {
-  height: 200px;
-  background-color: #00cc99; }
-
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: red;
+  max-width: 1920px;
+  background-color: #aa0601;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  transition: all 0.5s; }
-  .box:hover {
-    width: 200px;
-    background-color: #00cc99; }
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 88px; }
+  .header .list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .header .list li {
+      margin-left: 64px; }
+      .header .list li a {
+        display: block;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none; }
+        .header .list li a:hover {
+          color: black; }
+
+@media (max-width: 992px) {
+  .header {
+    padding: 30px 39px; } }
+
+@media (max-width: 767px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0; }
+    .header .list {
+      margin-top: 10px;
+      width: 100%; }
+      .header .list li {
+        width: 50%;
+        margin-left: 0;
+        text-align: center;
+        border: 1px solid white;
+        padding: 8px 0; } }
+
+.footer {
+  background-color: #aa0601;
+  padding: 32px 0; }
+  .footer .footerTop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .footer .footerTop .self ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-bottom: 36px; }
+      .footer .footerTop .self ul li {
+        margin-right: 48px; }
+        .footer .footerTop .self ul li a {
+          display: block;
+          color: white;
+          font-size: 16px;
+          text-decoration: none;
+          padding: 5px; }
+          .footer .footerTop .self ul li a:hover {
+            color: black; }
+    .footer .footerTop .self .tel {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-bottom: 16px; }
+      .footer .footerTop .self .tel a {
+        font-size: 36px;
+        color: white;
+        text-decoration: none;
+        margin-left: 22px; }
+    .footer .footerTop .self .mail {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-bottom: 24px; }
+      .footer .footerTop .self .mail a {
+        font-size: 36px;
+        color: white;
+        text-decoration: none;
+        margin-left: 22px; }
+  .footer .faceBook img {
+    margin-left: 32px; }
+  .footer .footerBottom {
+    border-top: 1px solid white;
+    padding: 32px 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .footer .footerBottom ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .footer .footerBottom ul li {
+        margin-left: 48px; }
+        .footer .footerBottom ul li a {
+          font-size: 14px;
+          color: white;
+          text-decoration: none; }
+          .footer .footerBottom ul li a:hover {
+            color: black; }
+
+@media (max-width: 992px) {
+  .footer .container {
+    max-width: 690px; }
+    .footer .container .footerTop .self ul {
+      margin-bottom: 0; }
+    .footer .container .footerTop .self li {
+      margin-right: 20px;
+      width: 70px; }
+      .footer .container .footerTop .self li a {
+        font-size: 14px; }
+    .footer .container .footerTop .tel img {
+      width: 18px;
+      height: 18px; }
+    .footer .container .footerTop .tel a {
+      font-size: 20px; }
+    .footer .container .footerTop .mail img {
+      width: 18px;
+      height: 18px; }
+    .footer .container .footerTop .mail a {
+      font-size: 20px; }
+    .footer .container .footerTop .faceBook img {
+      width: 24px;
+      height: 24px;
+      margin-left: 24px; }
+  .footerBottom ul li a {
+    display: block;
+    text-align: right;
+    width: 70px; } }
+
+@media (max-width: 767px) {
+  .footer .container {
+    max-width: 375px;
+    padding: 0 15px; }
+    .footer .container .footerTop .self ul {
+      display: none; }
+  .footerTop .faceBook {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .footer .container .footerBottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .footer .container .footerBottom p {
+      margin-bottom: 10px; }
+    .footer .container .footerBottom ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .footer .container .footerBottom ul li {
+        margin-left: 0;
+        margin-bottom: 10px; }
+        .footer .container .footerBottom ul li a {
+          text-align: left; } }
+
+.banner {
+  background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/banner.png?raw=true);
+  height: 840px;
+  background-position: center;
+  background-size: cover;
+  padding: 350px 0; }
+  .banner .bannerTxt {
+    text-align: right; }
+    .banner .bannerTxt h1 {
+      font-family: "Roboto Condensed", sans-serif;
+      font-size: 36px;
+      color: #650300; }
+    .banner .bannerTxt p {
+      font-family: "Roboto Condensed", sans-serif;
+      font-size: 64px;
+      color: #650300;
+      font-weight: 600; }
+
+@media (max-width: 992px) {
+  .banner {
+    background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/banner-sm.png?raw=true); }
+    .banner .container {
+      max-width: 690px; }
+      .banner .container h1 {
+        font-size: 20px; }
+      .banner .container p {
+        font-size: 48px; } }
+
+@media (max-width: 767px) {
+  .banner {
+    height: 394px; }
+  .banner .container {
+    max-width: 375px; }
+    .banner .container h1 {
+      font-size: 16px; }
+    .banner .container p {
+      font-size: 32px; } }
+
+.major {
+  background-color: #AA06010D; }
+  .major .container {
+    padding: 60px 0; }
+    .major .container h2 {
+      text-align: center;
+      color: #650300;
+      font-size: 48px;
+      font-weight: 600;
+      margin-bottom: 40px; }
+    .major .container ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      .major .container ul li {
+        text-align: center;
+        width: 23%; }
+        .major .container ul li img {
+          width: 83px;
+          height: 83px;
+          margin-bottom: 24px; }
+        .major .container ul li h3 {
+          margin-bottom: 8px;
+          color: #650300;
+          font-size: 24px;
+          font-weight: 600; }
+        .major .container ul li p {
+          font-size: 16px;
+          line-height: 1.5; }
+
+@media (max-width: 992px) {
+  .major .container {
+    max-width: 690px;
+    padding: 40px; }
+    .major .container h2 {
+      font-size: 32px; }
+  .major .container ul li {
+    width: 45%; } }
+
+@media (max-width: 767px) {
+  .major {
+    padding: 32px 60px; }
+    .major .container h2 {
+      font-size: 24px; }
+    .major .container ul li {
+      width: 100%;
+      margin-bottom: 40px; } }
+
+.classic {
+  margin-top: 60px;
+  margin-bottom: 80px; }
+  .classic h2 {
+    text-align: center;
+    font-size: 48px;
+    color: #650300;
+    font-weight: 600;
+    margin-bottom: 40px; }
+  .classic .classicItem {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 32px; }
+    .classic .classicItem img {
+      max-width: 57%; }
+    .classic .classicItem .classicTxt {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      margin-left: 30px; }
+      .classic .classicItem .classicTxt p {
+        font-size: 48px;
+        color: #aa0601;
+        font-weight: 600;
+        margin-left: 10px; }
+  .classic .special {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse; }
+    .classic .special .special2 {
+      margin-right: 30px; }
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 690px; }
+    .container .classicItem .classicTxt p {
+      font-size: 28px; }
+    .container .special {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 375px;
+    padding: 0 15px; }
+    .container .classicItem {
+      width: 100%;
+      position: relative; }
+      .container .classicItem img {
+        max-width: 100%; }
+      .container .classicItem .classicTxt {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); } }
+
+.joint {
+  background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/bg.png?raw=true);
+  background-position: center;
+  background-size: cover;
+  padding: 60px 0 80px 0; }
+  .joint h2 {
+    font-size: 48px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 40px; }
+  .joint .jointContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .joint .jointContent .jointSetting1 {
+      opacity: 0.8;
+      position: relative;
+      background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/product-8.png?raw=true);
+      background-position: center;
+      background-size: cover;
+      width: 540px;
+      height: 455px; }
+      .joint .jointContent .jointSetting1 p {
+        position: absolute;
+        font-size: 64px;
+        color: #aa0601;
+        font-weight: 600;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); }
+    .joint .jointContent .jointSetting2 {
+      opacity: 0.8;
+      position: relative;
+      background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/product-9.png?raw=true);
+      background-position: center;
+      background-size: cover;
+      width: 540px;
+      height: 455px; }
+      .joint .jointContent .jointSetting2 p {
+        position: absolute;
+        font-size: 64px;
+        color: #aa0601;
+        font-weight: 600;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); }
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 690px; }
+    .container .jointContent .jointSetting1 {
+      width: 330px; }
+      .container .jointContent .jointSetting1 p {
+        font-size: 32px; }
+    .container .jointContent .jointSetting2 {
+      width: 330px; }
+      .container .jointContent .jointSetting2 p {
+        font-size: 32px; } }
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 375px;
+    padding: 0 15px; }
+    .container h2 {
+      font-size: 20px; }
+    .container .jointContent {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .container .jointContent .jointSetting1 {
+        width: 345px;
+        height: 291px;
+        margin-bottom: 16px; }
+      .container .jointContent .jointSetting2 {
+        width: 345px;
+        height: 291px; } }
+
+.customer {
+  margin-top: 60px; }
+  .customer h3 {
+    color: #650300;
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    text-align: center; }
+  .customer ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .customer ul li {
+      width: 23%;
+      border: 1px solid #DEE2E6;
+      -webkit-box-shadow: 2px 2px 1px #DEE2E6;
+              box-shadow: 2px 2px 1px #DEE2E6;
+      border-radius: 3px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+      .customer ul li img {
+        margin-bottom: 16px;
+        max-width: 100%;
+        height: 256px; }
+      .customer ul li h4 {
+        margin-bottom: 8px;
+        font-size: 14px;
+        margin-left: 16px; }
+      .customer ul li p {
+        font-size: 16px;
+        line-height: 1.5;
+        height: calc(100% - 80px);
+        padding: 16px; }
+      .customer ul li h6 {
+        font-size: 14px;
+        color: #707070;
+        margin-left: 16px;
+        margin-bottom: 16px; }
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 690px; }
+    .container ul li {
+      width: 49%;
+      margin-bottom: 32px; } }
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 375px;
+    padding: 0 15px; }
+    .container ul li {
+      width: 100%; } }
+
+.connection {
+  background-color: #AA06010D;
+  padding: 60px 0;
+  margin-top: 80px; }
+  .connection .container {
+    padding: 0 200px; }
+    .connection .container h3 {
+      font-size: 48px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 24px; }
+    .connection .container p {
+      font-size: 20px;
+      text-align: left;
+      margin-bottom: 20px;
+      line-height: 1.5; }
+    .connection .container label {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 16px; }
+    .connection .container input {
+      width: 100%;
+      margin-bottom: 16px;
+      opacity: 0.3;
+      border: 1px solid black;
+      padding: 10px; }
+    .connection .container textarea {
+      width: 100%;
+      opacity: 0.3;
+      height: 136px;
+      margin-bottom: 16px; }
+    .connection .container .check {
+      width: 20px;
+      opacity: 1; }
+    .connection .container .btn {
+      display: block;
+      width: 50%;
+      margin-left: 25%;
+      padding: 16px 0;
+      background-color: #aa0601;
+      border: none;
+      color: white;
+      margin-top: 20px; }
+      .connection .container .btn:hover {
+        cursor: pointer;
+        background-color: gray;
+        color: #aa0601; }
+
+@media (max-width: 992px) {
+  .connection .container {
+    max-width: 690px;
+    padding: 0 100px; }
+    .connection .container h3 {
+      font-size: 32px; }
+    .connection .container p {
+      font-size: 16px; }
+  .connection .btn {
+    width: 40%; } }
+
+@media (max-width: 767px) {
+  .connection .container {
+    max-width: 375px;
+    padding: 0 15px; }
+  .connection h3 {
+    font-size: 20px; } }
 
 /*# sourceMappingURL=all.css.map */
