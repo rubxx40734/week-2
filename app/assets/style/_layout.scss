@@ -1,0 +1,209 @@
+body{
+    max-width: 1920px;
+    font-family: $ff;
+}
+.container{
+    max-width: 1110px;
+    margin: 0 auto;
+}
+.header{
+    max-width: 1920px;
+    background-color: $primary;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 88px;
+    .list{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        li{
+            margin-left: 64px;
+            a{
+                display: block;
+                color: white;
+                font-size: 20px;
+                font-weight: 600;
+                text-decoration: none;
+                &:hover{
+                    color: black;
+                }
+            }
+        }
+    }
+}
+@media(max-width:992px) {
+     .header{
+         padding: 30px 39px;
+     }
+}
+@media(max-width:767px){
+    .header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        .list{
+            margin-top: 10px;
+            width: 100%;
+            li{
+                width: 50%;
+                margin-left: 0;
+                text-align: center;
+                border: 1px solid white;
+                padding: 8px 0;
+            }
+        }
+    }
+}
+
+.footer{
+    background-color: $primary;
+    padding: 32px 0;
+    .footerTop{
+        display: flex;
+        justify-content: space-between;
+        .self{
+            ul{
+                display: flex;
+                margin-bottom: 36px;
+                li{
+                    margin-right: 48px;
+                    a{
+                        display: block;
+                        color: white;
+                        font-size: 16px;
+                        text-decoration: none;
+                        padding: 5px;
+                        &:hover{
+                            color: black;
+                        }
+                    }
+                }
+            }
+            .tel{
+              display: flex;
+              align-items: center;
+              margin-bottom: 16px;
+              a{
+                  font-size: 36px;
+                  color: white;
+                  text-decoration: none;
+                  margin-left: 22px;
+              }
+            }
+            .mail{
+                display: flex;
+                align-items: center;
+                margin-bottom: 24px;
+                a{
+                    font-size: 36px;
+                    color: white;
+                    text-decoration: none;
+                    margin-left: 22px;
+                }
+            }
+           
+        }
+    }
+    .faceBook{
+       img{
+           margin-left: 32px;
+       }
+    }
+    .footerBottom{
+        border-top: 1px solid white;
+        padding: 32px 0;
+        display: flex;
+        justify-content: space-between;
+        ul{
+            display: flex;
+            li{
+                margin-left: 48px;
+                a{
+                    font-size: 14px;
+                    color: white;
+                    text-decoration: none;
+                    &:hover{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:992px){
+    .footer .container{
+        max-width: 690px;
+        .footerTop .self{
+            ul{
+               margin-bottom: 0;
+            } li{
+                margin-right: 20px;
+                width: 70px;
+                a{
+                    font-size: 14px;
+                }
+            }
+        }
+        .footerTop .tel{
+            img{
+                width: 18px;
+                height: 18px;
+            }
+            a{
+                font-size: 20px;
+            }
+        }
+        .footerTop .mail{
+            img{
+                width: 18px;
+                height: 18px;
+            }
+            a{
+                font-size: 20px;
+            }
+        }
+        .footerTop .faceBook img{
+            width: 24px;
+            height: 24px;
+            margin-left: 24px;
+        }
+    }
+    .footerBottom{
+        ul li a{
+            display: block;
+            text-align: right;
+            width: 70px;
+        }
+    }
+}
+@media(max-width:767px){
+    .footer .container{
+        max-width: 375px;
+        padding: 0 15px;
+        .footerTop .self ul{
+            display: none;
+        }
+    }
+    .footerTop .faceBook{
+        display: flex;
+    }
+    .footer .container .footerBottom{
+        display: flex;
+        flex-direction: column;
+        p{
+            margin-bottom: 10px;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            li{
+                margin-left: 0;
+                margin-bottom: 10px;
+                a{
+                    text-align: left;
+                }
+            }
+        }
+    }
+}

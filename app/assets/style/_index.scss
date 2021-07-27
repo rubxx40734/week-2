@@ -1,0 +1,423 @@
+.banner{
+    background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/banner.png?raw=true);
+    height: 840px;
+    background-position: center;
+    background-size: cover;
+    padding: 350px 0;
+    .bannerTxt{
+        text-align: right;
+        h1{
+            font-family: $ff;
+            font-size: 36px;
+            color: $sec;
+        }
+        p{
+            font-family: $ff;
+            font-size: $font-xl;
+            color: $sec;
+            font-weight: 600;
+        }
+    }
+}
+@media(max-width:992px){
+    .banner{
+        background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/banner-sm.png?raw=true);
+        .container{
+            max-width: 690px;
+            h1{
+                font-size: 20px;
+            }
+            p{
+                font-size: $font-l;
+            }
+        }
+    }
+}
+@media (max-width:767px) {
+    .banner{
+        height: 394px;
+    }
+    .banner .container{
+        max-width: 375px;
+        h1{
+            font-size: 16px;
+        }
+        p{
+            font-size: 32px;
+        }
+    }
+}
+
+.major{
+   background-color: $bgColor;
+   .container{
+       padding: 60px 0;
+       h2{
+           text-align: center;
+           color: $sec;
+           font-size: $font-l;
+           font-weight: 600;
+           margin-bottom: 40px;
+       }
+       ul{
+           display: flex;
+           justify-content: space-between;
+           flex-wrap: wrap;
+           li{
+               text-align: center;
+               width: 23%;
+               img{
+                   width: 83px;
+                   height: 83px;
+                   margin-bottom: 24px;
+               }
+               h3{
+                   margin-bottom: 8px;
+                   color: $sec;
+                   font-size: $font-m;
+                   font-weight: 600;
+               }
+               p{
+                   font-size: 16px;
+                   line-height: 1.5;
+               }
+           }
+       }
+   }
+}
+@media(max-width:992px){
+    .major .container{
+        max-width: 690px;
+        padding: 40px;
+        h2{
+            font-size: 32px;
+        }
+    }
+    .major .container ul li{
+        width: 45%;
+    }
+}
+@media(max-width:767px){
+    .major{
+        padding: 32px 60px;
+        .container h2{
+            font-size: 24px;
+        }
+        .container ul li{
+            width: 100%;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.classic{
+    margin-top: 60px;
+    margin-bottom: 80px;
+    h2{
+        text-align: center;
+        font-size: $font-l;
+        color: $sec;
+        font-weight: 600;
+        margin-bottom: 40px;
+    }.classicItem{
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+        img{
+            max-width: 57%;
+            
+        }
+        .classicTxt{
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+            p{
+                font-size: $font-l;
+                color: $primary;
+                font-weight: 600;
+                margin-left: 10px;
+            }
+        }
+    }
+    .special{
+        flex-direction: row-reverse;
+        .special2{
+            margin-right: 30px;
+        }
+    }
+}
+@media(max-width:992px){
+    .container{
+        max-width: 690px;
+        .classicItem .classicTxt p{
+            font-size: 28px;
+        }
+        .special{
+            flex-direction: row;
+        }
+    }
+}
+@media(max-width:767px){
+    .container{
+        max-width: 375px;
+        padding: 0 15px;
+        .classicItem{
+            width: 100%;
+            position: relative;
+            img{
+                max-width: 100%;
+            }
+            .classicTxt{
+                position: absolute;
+                top: 50%;
+                left: 40%;
+                transform: translate(-50%,-50%);
+            }
+        }
+    }
+}
+
+.joint{
+    background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/bg.png?raw=true);
+    background-position: center;
+    background-size: cover;
+    padding: 60px 0 80px 0;
+    h2{
+        font-size: $font-l;
+        color: white;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .jointContent{
+        display: flex;
+        justify-content: space-between;
+        .jointSetting1{
+            opacity: 0.8;
+            position: relative;
+            background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/product-8.png?raw=true);
+            background-position: center;
+            background-size: cover;
+            width: 540px;
+            height: 455px;
+            p{
+                position: absolute;
+                font-size: $font-xl;
+                color: $primary;
+                font-weight: 600;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+        .jointSetting2{
+            opacity: 0.8;
+            position: relative;
+            background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/product-9.png?raw=true);
+            background-position: center;
+            background-size: cover;
+            width: 540px;
+            height: 455px;
+            p{
+                position: absolute;
+                font-size: $font-xl;
+                color: $primary;
+                font-weight: 600;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+        }
+    }
+}
+@media(max-width:992px){
+    .container{
+        max-width: 690px;
+        .jointContent .jointSetting1{
+            width: 330px;
+            p{
+                font-size: 32px;
+            }
+        }
+        .jointContent .jointSetting2{
+            width: 330px;
+            p{
+                font-size: 32px;
+            }
+        }
+    }
+}
+@media(max-width:767px){
+    .container{
+        max-width: 375px;
+        padding: 0 15px;
+        h2{
+            font-size: 20px;
+        }
+        .jointContent{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .jointSetting1{
+                width: 345px;
+                height: 291px;
+                margin-bottom: 16px;
+            }
+            .jointSetting2{
+                width: 345px;
+                height: 291px;
+            }
+        }
+    }
+}
+
+.customer{
+    margin-top: 60px;
+    h3{
+        color: $sec;
+        font-size: $font-l;
+        font-weight: 600;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li{
+            width: 23%;
+            border: 1px solid #DEE2E6;
+            box-shadow: 2px 2px 1px #DEE2E6;
+            border-radius: 3px;
+            display: flex;
+            flex-direction: column;
+            img{
+                margin-bottom: 16px;
+                max-width: 100%;
+                height: 256px;
+            }
+            h4{
+                margin-bottom: 8px;
+                font-size: 14px;
+                margin-left: 16px;
+            }
+         
+            p{
+                font-size: 16px;
+                line-height: 1.5;
+                height: calc(100% - 80px);
+                padding: 16px;
+            }
+            h6{
+                font-size: 14px;
+                color: #707070;
+                margin-left: 16px;
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
+@media(max-width:992px){
+    .container{
+        max-width: 690px;
+        ul li{
+            width: 49%;
+            margin-bottom: 32px;
+        }
+    }
+}
+@media(max-width:767px){
+    .container{
+        max-width: 375px;
+        padding: 0 15px;
+        ul li{
+            width: 100%;
+        }
+    }
+}
+
+.connection{
+    background-color: $bgColor;
+    padding: 60px 0;
+    margin-top: 80px;
+    .container{
+        padding: 0 200px;
+        h3{
+            font-size: $font-l;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        p{
+            font-size: 20px;
+            text-align: left;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        label{
+            display: block;
+            margin-bottom: 4px;
+            font-size: 16px;
+        }
+        input{
+            width: 100%;
+            margin-bottom: 16px;
+            opacity: 0.3;
+            border: 1px solid black;
+            padding: 10px;
+        }
+        textarea{
+            width: 100%;
+            opacity: 0.3;
+            height: 136px;
+            margin-bottom: 16px;
+        }
+        .check{
+            width: 20px;
+            opacity: 1;
+        }
+        .btn{
+            display: block;
+            width: 50%;
+            margin-left: 25%;
+            padding: 16px 0;
+            background-color: $primary;
+            border: none;
+            color: white;
+            margin-top: 20px;
+            &:hover{
+                cursor: pointer;
+                background-color: gray;
+                color: $primary;
+            }
+        }
+    }
+}
+@media(max-width:992px){
+    .connection{
+        .container{
+            max-width: 690px;
+            padding: 0 100px;
+            h3{
+                font-size: 32px;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+        .btn{
+            width: 40%;
+        }
+    }
+}
+@media(max-width:767px){
+    .connection{
+        .container{
+            max-width: 375px;
+            padding: 0 15px;
+        }
+        h3{
+            font-size: 20px;
+        }
+    }
+}

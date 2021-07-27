@@ -1,23 +1,5 @@
-$color: #00cc99;
-
-.header {
-  height: 200px;
-  background-color: #00cc99;
-}
-
-.footer {
-  height: 200px;
-  background-color: #00cc99;
-}
-
-.box {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  display: flex;
-  transition: all 0.5s;
-  &:hover {
-    width: 200px;
-    background-color: $color;
-  }
-}
+@import '_reset.scss';
+@import '_variable.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap');
+@import '_layout.scss';
+@import '_index.scss'
