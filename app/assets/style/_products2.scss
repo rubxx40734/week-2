@@ -1,0 +1,13 @@
+.products1List .proList .w33{
+    width: 32%;
+}
+@include ipad{
+    .products1List .proList .w33{
+        width: 48%;
+    }
+}
+@include mobile{
+    .products1List .proList .w33{
+        width: 100%;
+    }
+}

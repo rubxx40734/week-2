@@ -1,8 +1,7 @@
 .banner{
     background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/banner.png?raw=true);
     height: 840px;
-    background-position: center;
-    background-size: cover;
+    @include bg-img;
     padding: 350px 0;
     .bannerTxt{
         text-align: right;
@@ -179,8 +178,7 @@
 
 .joint{
     background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/bg.png?raw=true);
-    background-position: center;
-    background-size: cover;
+    @include bg-img;
     padding: 60px 0 80px 0;
     h2{
         font-size: $font-l;
@@ -196,8 +194,7 @@
             opacity: 0.8;
             position: relative;
             background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/product-8.png?raw=true);
-            background-position: center;
-            background-size: cover;
+            @include bg-img;
             width: 540px;
             height: 455px;
             p{
@@ -214,8 +211,7 @@
             opacity: 0.8;
             position: relative;
             background-image: url(https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/product-9.png?raw=true);
-            background-position: center;
-            background-size: cover;
+            @include bg-img;
             width: 540px;
             height: 455px;
             p{
