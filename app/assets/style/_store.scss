@@ -1,0 +1,105 @@
+.storeMap{
+    .container{
+        margin-top: 96px;
+        margin-bottom: 128px;
+        h1{
+            font-size: $font-l;
+            font-weight: 600;
+            padding: 0 16px;
+            border-left: 8px solid $primary;
+            margin-bottom: 65px;
+        }
+        .mapChoose{
+            margin-bottom: 37px;
+            label{
+                font-size: $font-m;
+                margin-right: 20px;
+            }
+            select{
+                width: 324px;
+                padding: 10px 20px;
+                border-color: $border;
+            }
+        }
+        .storeLocal{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            li{
+                width: 32%;
+                border: 1px solid $border;
+                margin-bottom: 32px;
+                img{
+                    width: 100%;
+                    height: 224px;
+                }
+                h2{
+                    padding: 12px 24px;
+                    font-size: $font-m;
+                    border-bottom: 1px solid $border;
+                    margin-bottom: 16px;
+                }
+                .tel,.time,.local{
+                    display: flex;
+                    align-items: center;
+                    padding: 8px 27px;
+                    img{
+                        width: 24px;
+                        height: 24px;
+                        margin-right: 8px;
+                    }
+                }
+                button{
+                    width: 100%;
+                    color: wheat;
+                    background-color: black;
+                    padding: 20px 0;
+                    border: none;
+                    margin-top: 8px;
+                    &:hover{
+                        color: black;
+                        background-color: wheat;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .setting{
+                margin-right: 34%;
+            }
+        }
+    }
+}
+@include ipad(){
+    .storeMap{
+        .container{
+            max-width: 690px;
+            .storeLocal{
+                justify-content: space-between;
+                li{
+                    width: 48%;
+                }
+            }
+        }
+    }
+}
+@include mobile(){
+    .storeMap{
+        .container{
+            max-width: 375px;
+            h1{
+                font-size: 28px;
+            }
+            .mapChoose{
+                label{
+                    font-size: 14px;
+                }
+                select{
+                    width: 60%;
+                }
+            }
+            .storeLocal li{
+                width: 100%;
+            }
+        }
+    }
+}
