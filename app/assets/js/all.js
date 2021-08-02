@@ -4,6 +4,8 @@ $(document).ready(() => {
   console.log('HesSchool Hello!');
 });
 
+
+// ============地區篩選============
 let data = [
   {
     "main":"台北",
@@ -87,8 +89,7 @@ mapChooseJs.addEventListener('click',function(e){
           <img src="${item.iconlocal}" alt="">
           <p>地址：${item.map}</p>
       </div>
-      <button type="button">詳細資訊</button>
-  </li>`
+      <button type="button"><a href="storemap.html">詳細資訊</a></button>`
     }
     else if(e.target.value == item.main){
       str+=` <li>
@@ -106,9 +107,21 @@ mapChooseJs.addEventListener('click',function(e){
           <img src="${item.iconlocal}" alt="">
           <p>地址：${item.map}</p>
       </div>
-      <button type="button">詳細資訊</button>
+      <button type="button"><a href="storemap.html">詳細資訊</a></button>
   </li>`
     }
     storeLocal.innerHTML = str
   })
 })
+
+
+// ===========地圖顯示JS============
+// const mapChooseSearchJs = document.querySelector('.mapChooseSearchJs')
+// console.log(mapChooseSearchJs)
+
+// const searchitem = document.querySelector('.searchitem')
+// console.log(searchitem)
+
+// mapChooseSearchJs.addEventListener('click',function(e){
+//   console.log(e.target.value)
+// })

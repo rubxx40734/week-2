@@ -1,0 +1,121 @@
+.storeSearch{
+    .container{
+        margin-top: 96px;
+        margin-bottom: 128px;
+        h1{
+            font-size: $font-l;
+            font-weight: 600;
+            padding: 0 16px;
+            border-left: 8px solid $primary;
+            margin-bottom: 65px;
+        }
+        .localChoose{
+            margin-bottom: 37px;
+            label{
+                font-size: $font-m;
+                margin-right: 20px;
+            }
+            select{
+                width: 324px;
+                padding: 10px 20px;
+                border-color: $border;
+            }
+        }
+        .searchitem{
+            display: flex;
+            justify-content: space-between;
+            .searchitem-pct{
+                border: 1px solid $border;
+                width: 40%;
+                img{
+                    width: 100%;
+                    height: 224px;
+                }
+                .setting{
+                    h2{
+                        padding: 12px 24px;
+                        font-size: $font-m;
+                        border-bottom: 1px solid $border;
+                        margin-bottom: 16px;
+                    }
+                    .tel,.time,.local{
+                        display: flex;
+                        align-items: center;
+                        padding: 8px 27px;
+                        img{
+                            width: 24px;
+                            height: 24px;
+                            margin-right: 8px;
+                        }
+                    }
+                }
+            }
+            .searchitem-map{
+                width: 58%;
+                iframe{
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@include ipad(){
+    .storeSearch{
+        .container{
+            max-width: 690px;
+            .searchitem{
+                flex-direction: column;
+                .searchitem-pct{
+                    width: 100%;
+                    display: flex;
+                    margin-bottom: 32px;
+                    img{
+                        max-width: 330px;
+                    }
+                }
+                .searchitem-map{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@include mobile(){
+    .storeSearch{
+        .container{
+            max-width: 375px;
+            padding: 0 15px;
+            h1{
+                font-size: 28px;
+            }
+            .localChoose{
+               width: 100%;
+               label{
+                   width: 30%;
+                   font-size: 14px;
+               }
+               select{
+                   width: 65%;
+               }
+            }
+            .searchitem{
+                .searchitem-pct{
+                    flex-direction: column;
+                    width: 100%;
+                    img{
+                        max-width: 100%;
+                    }
+                    .setting{
+                        h2{
+                            font-size: 16px;
+                        }
+                        p{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

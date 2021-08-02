@@ -24,9 +24,9 @@
         .storeLocal{
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-evenly;
             li{
                 width: 32%;
+                margin-right: 1%;
                 border: 1px solid $border;
                 margin-bottom: 32px;
                 img{
@@ -51,21 +51,24 @@
                 }
                 button{
                     width: 100%;
-                    color: wheat;
                     background-color: black;
                     padding: 20px 0;
                     border: none;
                     margin-top: 8px;
+                    a{
+                        color: wheat;
+                        text-decoration: none;
+                        display: block;
+                    }
                     &:hover{
-                        color: black;
-                        background-color: wheat;
+                        background-color: gray;
                         cursor: pointer;
                     }
                 }
             }
-            .setting{
-                margin-right: 34%;
-            }
+            // .setting{
+            //     margin-right: 33%;
+            // }
         }
     }
 }
