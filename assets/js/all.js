@@ -3,7 +3,8 @@
 console.log('Hello!');
 $(document).ready(function () {
   console.log('HesSchool Hello!');
-});
+}); // ============地區篩選============
+
 var data = [{
   "main": "台北",
   "local": "https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/locate1.jpeg?raw=true",
@@ -64,12 +65,19 @@ mapChooseJs.addEventListener('click', function (e) {
   console.log(e.target.value);
   data.forEach(function (item) {
     if (e.target.value == '全台門市') {
-      str += " <li>\n      <img src=\"".concat(item.local, "\" alt=\"\">\n      <h2>").concat(item.title, "</h2>\n      <div class=\"tel\">\n          <img src=\"").concat(item.icontel, "\" alt=\"\">\n          <p>\u96FB\u8A71\uFF1A").concat(item.tel, "</p>\n      </div>\n      <div class=\"time\">\n          <img src=\"").concat(item.icontime, "\" alt=\"\">\n          <p>\u71DF\u696D\u6642\u9593\uFF1A").concat(item.time, "</p>\n      </div>\n      <div class=\"local\">\n          <img src=\"").concat(item.iconlocal, "\" alt=\"\">\n          <p>\u5730\u5740\uFF1A").concat(item.map, "</p>\n      </div>\n      <button type=\"button\">\u8A73\u7D30\u8CC7\u8A0A</button>\n  </li>");
+      str += " <li>\n      <img src=\"".concat(item.local, "\" alt=\"\">\n      <h2>").concat(item.title, "</h2>\n      <div class=\"tel\">\n          <img src=\"").concat(item.icontel, "\" alt=\"\">\n          <p>\u96FB\u8A71\uFF1A").concat(item.tel, "</p>\n      </div>\n      <div class=\"time\">\n          <img src=\"").concat(item.icontime, "\" alt=\"\">\n          <p>\u71DF\u696D\u6642\u9593\uFF1A").concat(item.time, "</p>\n      </div>\n      <div class=\"local\">\n          <img src=\"").concat(item.iconlocal, "\" alt=\"\">\n          <p>\u5730\u5740\uFF1A").concat(item.map, "</p>\n      </div>\n      <button type=\"button\"><a href=\"storemap.html\">\u8A73\u7D30\u8CC7\u8A0A</a></button>");
     } else if (e.target.value == item.main) {
-      str += " <li>\n      <img src=\"".concat(item.local, "\" alt=\"\">\n      <h2>").concat(item.title, "</h2>\n      <div class=\"tel\">\n          <img src=\"").concat(item.icontel, "\" alt=\"\">\n          <p>\u96FB\u8A71\uFF1A").concat(item.tel, "</p>\n      </div>\n      <div class=\"time\">\n          <img src=\"").concat(item.icontime, "\" alt=\"\">\n          <p>\u71DF\u696D\u6642\u9593\uFF1A").concat(item.time, "</p>\n      </div>\n      <div class=\"local\">\n          <img src=\"").concat(item.iconlocal, "\" alt=\"\">\n          <p>\u5730\u5740\uFF1A").concat(item.map, "</p>\n      </div>\n      <button type=\"button\">\u8A73\u7D30\u8CC7\u8A0A</button>\n  </li>");
+      str += " <li>\n      <img src=\"".concat(item.local, "\" alt=\"\">\n      <h2>").concat(item.title, "</h2>\n      <div class=\"tel\">\n          <img src=\"").concat(item.icontel, "\" alt=\"\">\n          <p>\u96FB\u8A71\uFF1A").concat(item.tel, "</p>\n      </div>\n      <div class=\"time\">\n          <img src=\"").concat(item.icontime, "\" alt=\"\">\n          <p>\u71DF\u696D\u6642\u9593\uFF1A").concat(item.time, "</p>\n      </div>\n      <div class=\"local\">\n          <img src=\"").concat(item.iconlocal, "\" alt=\"\">\n          <p>\u5730\u5740\uFF1A").concat(item.map, "</p>\n      </div>\n      <button type=\"button\"><a href=\"storemap.html\">\u8A73\u7D30\u8CC7\u8A0A</a></button>\n  </li>");
     }
 
     storeLocal.innerHTML = str;
   });
-});
+}); // ===========地圖顯示JS============
+// const mapChooseSearchJs = document.querySelector('.mapChooseSearchJs')
+// console.log(mapChooseSearchJs)
+// const searchitem = document.querySelector('.searchitem')
+// console.log(searchitem)
+// mapChooseSearchJs.addEventListener('click',function(e){
+//   console.log(e.target.value)
+// })
 //# sourceMappingURL=all.js.map
